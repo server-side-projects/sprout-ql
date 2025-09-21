@@ -1,0 +1,16 @@
+"""
+GET: User
+"""
+type User {
+  id: Int,
+  name: String!
+  email: String!
+  phone: String!
+  city: String!
+}
+type UserResponse implements APIResponse {
+  code: String!,
+  message: String,
+  schemaType: String,
+  payload: User
+}

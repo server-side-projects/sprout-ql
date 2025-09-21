@@ -23,6 +23,7 @@
   "author": "Sricharan Krishnan (https://github.com/sricharankrishnan)",
   "license": "ISC",
   "dependencies": {
+    "@graphql-tools/schema": "^10.0.25",
     "axios": "^1.12.1",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",

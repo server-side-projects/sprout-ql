@@ -1,0 +1,17 @@
+"""
+GET: Comment(s)
+"""
+type Comment {
+  id: Int!,
+  postId: Int!,
+  title: String!,
+  description: String!,
+  userEmail: String!
+}
+type CommentResponse implements APIResponse {
+  code: String!,
+  message: String,
+  schemaType: String,
+  payload: [Comment]
+}
+

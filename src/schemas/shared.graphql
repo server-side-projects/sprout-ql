@@ -1,0 +1,7 @@
+"""
+Shared API Response Interface
+"""
+interface APIResponse {
+  code: String!
+  message: String
+}

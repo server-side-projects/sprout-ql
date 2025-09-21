@@ -1,0 +1,9 @@
+type Query {
+  getPostById(id: Int): APIResponse
+}
+
+type Mutation {
+  deletePostById(payload: Int): APIResponse
+  createNewPost(payload: NewPost): APIResponse
+  updatePostById(payload: UpdatePost): APIResponse
+}

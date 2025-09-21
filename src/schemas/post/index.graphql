@@ -1,0 +1,69 @@
+"""
+GET Post
+"""
+type Post {
+  userId: Int!,
+  postId: Int!,
+  title: String!,
+  description: String!
+}
+type PostResponse implements APIResponse {
+  code: String!,
+  message: String,
+  schemaType: String,
+  payload: Post
+}
+
+"""
+CREATE Post
+"""
+input NewPost {
+  userId: Int!
+  title: String!
+  body: String!
+}
+type NewPostInsertId {
+  insertId: Int!
+}
+type NewPostResponse implements APIResponse {
+  code: String!
+  message: String
+  schemaType: String
+  payload: NewPostInsertId
+}
+
+"""
+UPDATE Post
+"""
+input UpdatePostData {
+  id: Int!
+  userId: Int!
+  title: String!
+  body: String!
+}
+input UpdatePost {
+  id: Int!
+  update: UpdatePostData!
+}
+type UpdatePostInsertId {
+  updateId: Int!
+}
+type UpdatePostResponse implements APIResponse {
+  code: String!
+  message: String
+  schemaType: String
+  payload: UpdatePostInsertId
+}
+
+"""
+DELETE Post
+"""
+type DeletedPost {
+  postId: Int
+}
+type DeletePostResponse implements APIResponse {
+  code: String!
+  message: String
+  schemaType: String
+  payload: DeletedPost
+}
