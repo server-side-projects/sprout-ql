@@ -67,3 +67,23 @@ type DeletePostResponse implements APIResponse {
   schemaType: String
   payload: DeletedPost
 }
+
+"""
+PAGINATION Post
+"""
+input PostPaginationProp {
+  first: Int!
+  from: String
+}
+
+type PostEdge {
+  node: Post!
+  cursor: String!
+}
+
+type PostPaginationResponse implements APIResponse {
+  code: String!
+  message: String
+  schemaType: String
+  payload: [PostEdge!]
+}

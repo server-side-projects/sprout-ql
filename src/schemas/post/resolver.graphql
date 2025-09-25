@@ -1,5 +1,6 @@
 type Query {
   getPostById(id: Int): APIResponse
+  getPosts(payload: PostPaginationProp): APIResponse
 }
 
 type Mutation {
